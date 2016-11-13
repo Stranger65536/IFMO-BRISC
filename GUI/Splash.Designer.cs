@@ -2,15 +2,15 @@ namespace BRISC.GUI
 {
     partial class Splash
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
+        
+        
+        
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        
+        
+        
+        
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -19,27 +19,21 @@ namespace BRISC.GUI
             }
             base.Dispose(disposing);
         }
-
-        #region Windows Form Designer generated code
-
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
+        
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Splash));
             this.panel1 = new System.Windows.Forms.Panel();
             this.license = new System.Windows.Forms.TextBox();
-            this.checkBounds = new System.Windows.Forms.CheckBox();
-            this.checkScore = new System.Windows.Forms.CheckBox();
-            this.checkDistance = new System.Windows.Forms.CheckBox();
-            this.checkNodule = new System.Windows.Forms.CheckBox();
+            this.FourthCheck = new System.Windows.Forms.CheckBox();
+            this.ThirdCheck = new System.Windows.Forms.CheckBox();
+            this.SecondCheck = new System.Windows.Forms.CheckBox();
+            this.FirstCheck = new System.Windows.Forms.CheckBox();
             this.progressBar = new System.Windows.Forms.ProgressBar();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.status = new System.Windows.Forms.Label();
+            this.Status = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -48,15 +42,15 @@ namespace BRISC.GUI
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.license);
-            this.panel1.Controls.Add(this.checkBounds);
-            this.panel1.Controls.Add(this.checkScore);
-            this.panel1.Controls.Add(this.checkDistance);
-            this.panel1.Controls.Add(this.checkNodule);
+            this.panel1.Controls.Add(this.FourthCheck);
+            this.panel1.Controls.Add(this.ThirdCheck);
+            this.panel1.Controls.Add(this.SecondCheck);
+            this.panel1.Controls.Add(this.FirstCheck);
             this.panel1.Controls.Add(this.progressBar);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.status);
+            this.panel1.Controls.Add(this.Status);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(424, 251);
@@ -78,52 +72,52 @@ namespace BRISC.GUI
             // 
             // checkBounds
             // 
-            this.checkBounds.AutoSize = true;
-            this.checkBounds.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.checkBounds.Font = new System.Drawing.Font("Bitstream Vera Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBounds.Location = new System.Drawing.Point(241, 114);
-            this.checkBounds.Name = "checkBounds";
-            this.checkBounds.Size = new System.Drawing.Size(111, 17);
-            this.checkBounds.TabIndex = 13;
-            this.checkBounds.Text = "Thumbnail data";
-            this.checkBounds.UseVisualStyleBackColor = true;
-            this.checkBounds.Visible = false;
+            this.FourthCheck.AutoSize = true;
+            this.FourthCheck.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.FourthCheck.Font = new System.Drawing.Font("Bitstream Vera Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FourthCheck.Location = new System.Drawing.Point(241, 114);
+            this.FourthCheck.Name = "FourthCheck";
+            this.FourthCheck.Size = new System.Drawing.Size(111, 17);
+            this.FourthCheck.TabIndex = 13;
+            this.FourthCheck.Text = "Thumbnail data";
+            this.FourthCheck.UseVisualStyleBackColor = true;
+            this.FourthCheck.Visible = false;
             // 
             // checkScore
             // 
-            this.checkScore.AutoSize = true;
-            this.checkScore.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.checkScore.Font = new System.Drawing.Font("Bitstream Vera Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkScore.Location = new System.Drawing.Point(76, 114);
-            this.checkScore.Name = "checkScore";
-            this.checkScore.Size = new System.Drawing.Size(112, 17);
-            this.checkScore.TabIndex = 12;
-            this.checkScore.Text = "Annotation data";
-            this.checkScore.UseVisualStyleBackColor = true;
+            this.ThirdCheck.AutoSize = true;
+            this.ThirdCheck.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.ThirdCheck.Font = new System.Drawing.Font("Bitstream Vera Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ThirdCheck.Location = new System.Drawing.Point(76, 114);
+            this.ThirdCheck.Name = "ThirdCheck";
+            this.ThirdCheck.Size = new System.Drawing.Size(112, 17);
+            this.ThirdCheck.TabIndex = 12;
+            this.ThirdCheck.Text = "Annotation data";
+            this.ThirdCheck.UseVisualStyleBackColor = true;
             // 
             // checkDistance
             // 
-            this.checkDistance.AutoSize = true;
-            this.checkDistance.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.checkDistance.Font = new System.Drawing.Font("Bitstream Vera Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkDistance.Location = new System.Drawing.Point(241, 91);
-            this.checkDistance.Name = "checkDistance";
-            this.checkDistance.Size = new System.Drawing.Size(96, 17);
-            this.checkDistance.TabIndex = 11;
-            this.checkDistance.Text = "Feature Data";
-            this.checkDistance.UseVisualStyleBackColor = true;
+            this.SecondCheck.AutoSize = true;
+            this.SecondCheck.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.SecondCheck.Font = new System.Drawing.Font("Bitstream Vera Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SecondCheck.Location = new System.Drawing.Point(241, 91);
+            this.SecondCheck.Name = "SecondCheck";
+            this.SecondCheck.Size = new System.Drawing.Size(96, 17);
+            this.SecondCheck.TabIndex = 11;
+            this.SecondCheck.Text = "Feature Data";
+            this.SecondCheck.UseVisualStyleBackColor = true;
             // 
             // checkNodule
             // 
-            this.checkNodule.AutoSize = true;
-            this.checkNodule.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.checkNodule.Font = new System.Drawing.Font("Bitstream Vera Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkNodule.Location = new System.Drawing.Point(76, 91);
-            this.checkNodule.Name = "checkNodule";
-            this.checkNodule.Size = new System.Drawing.Size(91, 17);
-            this.checkNodule.TabIndex = 10;
-            this.checkNodule.Text = "Nodule data";
-            this.checkNodule.UseVisualStyleBackColor = true;
+            this.FirstCheck.AutoSize = true;
+            this.FirstCheck.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.FirstCheck.Font = new System.Drawing.Font("Bitstream Vera Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FirstCheck.Location = new System.Drawing.Point(76, 91);
+            this.FirstCheck.Name = "FirstCheck";
+            this.FirstCheck.Size = new System.Drawing.Size(91, 17);
+            this.FirstCheck.TabIndex = 10;
+            this.FirstCheck.Text = "Nodule data";
+            this.FirstCheck.UseVisualStyleBackColor = true;
             // 
             // progressBar
             // 
@@ -163,13 +157,13 @@ namespace BRISC.GUI
             // 
             // status
             // 
-            this.status.AutoSize = true;
-            this.status.Font = new System.Drawing.Font("Bitstream Vera Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.status.Location = new System.Drawing.Point(20, 149);
-            this.status.Name = "status";
-            this.status.Size = new System.Drawing.Size(66, 13);
-            this.status.TabIndex = 7;
-            this.status.Text = "Loading ...";
+            this.Status.AutoSize = true;
+            this.Status.Font = new System.Drawing.Font("Bitstream Vera Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Status.Location = new System.Drawing.Point(20, 149);
+            this.Status.Name = "Status";
+            this.Status.Size = new System.Drawing.Size(66, 13);
+            this.Status.TabIndex = 7;
+            this.Status.Text = "Loading ...";
             // 
             // Splash
             // 
@@ -189,18 +183,13 @@ namespace BRISC.GUI
 
         }
 
-        #endregion
+        
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label status;
         private System.Windows.Forms.ProgressBar progressBar;
-        private System.Windows.Forms.CheckBox checkDistance;
-        private System.Windows.Forms.CheckBox checkNodule;
-        private System.Windows.Forms.CheckBox checkScore;
-        private System.Windows.Forms.CheckBox checkBounds;
         private System.Windows.Forms.TextBox license;
     }
 }

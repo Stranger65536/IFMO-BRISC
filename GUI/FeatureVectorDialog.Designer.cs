@@ -2,15 +2,11 @@ namespace BRISC.GUI
 {
     partial class FeatureVectorDialog
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
+        
+        
+        
         private System.ComponentModel.IContainer components = null;
-
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+   
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -19,13 +15,6 @@ namespace BRISC.GUI
             }
             base.Dispose(disposing);
         }
-
-        #region Windows Form Designer generated code
-
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
             System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("Contrast");
@@ -39,17 +28,17 @@ namespace BRISC.GUI
             System.Windows.Forms.ListViewItem listViewItem9 = new System.Windows.Forms.ListViewItem("Variance");
             System.Windows.Forms.ListViewItem listViewItem10 = new System.Windows.Forms.ListViewItem("Cluster Tendency");
             System.Windows.Forms.ListViewItem listViewItem11 = new System.Windows.Forms.ListViewItem("Maximum Probability");
-            this.featureView = new System.Windows.Forms.ListView();
+            this.FeatureView = new System.Windows.Forms.ListView();
             this.SuspendLayout();
             // 
             // featureView
             // 
-            this.featureView.BackColor = System.Drawing.Color.Black;
-            this.featureView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.featureView.CheckBoxes = true;
-            this.featureView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.featureView.Font = new System.Drawing.Font("Bitstream Vera Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.featureView.ForeColor = System.Drawing.Color.Silver;
+            this.FeatureView.BackColor = System.Drawing.Color.Black;
+            this.FeatureView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.FeatureView.CheckBoxes = true;
+            this.FeatureView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.FeatureView.Font = new System.Drawing.Font("Bitstream Vera Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FeatureView.ForeColor = System.Drawing.Color.Silver;
             listViewItem1.StateImageIndex = 0;
             listViewItem1.Tag = "contrast";
             listViewItem2.StateImageIndex = 0;
@@ -72,7 +61,7 @@ namespace BRISC.GUI
             listViewItem10.Tag = "clusterTendency";
             listViewItem11.StateImageIndex = 0;
             listViewItem11.Tag = "maximumProbability";
-            this.featureView.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            this.FeatureView.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
             listViewItem1,
             listViewItem2,
             listViewItem3,
@@ -84,20 +73,20 @@ namespace BRISC.GUI
             listViewItem9,
             listViewItem10,
             listViewItem11});
-            this.featureView.Location = new System.Drawing.Point(0, 0);
-            this.featureView.MultiSelect = false;
-            this.featureView.Name = "featureView";
-            this.featureView.Size = new System.Drawing.Size(159, 193);
-            this.featureView.TabIndex = 0;
-            this.featureView.UseCompatibleStateImageBehavior = false;
-            this.featureView.View = System.Windows.Forms.View.SmallIcon;
+            this.FeatureView.Location = new System.Drawing.Point(0, 0);
+            this.FeatureView.MultiSelect = false;
+            this.FeatureView.Name = "FeatureView";
+            this.FeatureView.Size = new System.Drawing.Size(159, 193);
+            this.FeatureView.TabIndex = 0;
+            this.FeatureView.UseCompatibleStateImageBehavior = false;
+            this.FeatureView.View = System.Windows.Forms.View.SmallIcon;
             // 
             // FeatureVectorDialog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(159, 193);
-            this.Controls.Add(this.featureView);
+            this.Controls.Add(this.FeatureView);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -109,8 +98,6 @@ namespace BRISC.GUI
 
         }
 
-        #endregion
-
-        private System.Windows.Forms.ListView featureView;
+        
     }
 }
