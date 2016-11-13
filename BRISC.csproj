@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{302FAF90-F36B-407C-A71B-C033DC5112D6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BRISC</RootNamespace>
+    <AssemblyName>BRISC</AssemblyName>
+    <ApplicationIcon>MainIcon.ico</ApplicationIcon>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <StartupObject>BRISC.GUI.Program</StartupObject>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.1.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <PlatformTarget>x64</PlatformTarget>
+    <DocumentationFile>bin\Debug\BRISC.xml</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\FeatureExtractor.cs" />
+    <Compile Include="Core\GaborFilter.cs" />
+    <Compile Include="Core\GlobalCoOccurrence.cs" />
+    <Compile Include="Core\LIDCImport.cs" />
+    <Compile Include="Core\LIDCNodule.cs" />
+    <Compile Include="Core\LIDCNoduleDB.cs" />
+    <Compile Include="Core\LocalCoOccurrence.cs" />
+    <Compile Include="Core\MarkovRandom.cs" />
+    <Compile Include="Core\Similarity.cs" />
+    <Compile Include="Core\UnsafeBitmap.cs" />
+    <Compile Include="Core\Util.cs" />
+    <Compile Include="GUI\FeatureVectorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FeatureVectorDialog.Designer.cs">
+      <DependentUpon>FeatureVectorDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ListViewColumnSorter.cs" />
+    <Compile Include="GUI\MainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\MainMenu.Designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\NoduleViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\NoduleViewer.Designer.cs">
+      <DependentUpon>NoduleViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Program.cs" />
+    <Compile Include="GUI\SeriesViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\SeriesViewer.Designer.cs">
+      <DependentUpon>SeriesViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Splash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Splash.Designer.cs">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Matrix\CholeskyDecomposition.cs" />
+    <Compile Include="Matrix\EigenvalueDecomposition.cs" />
+    <Compile Include="Matrix\GeneralMatrix.cs" />
+    <Compile Include="Matrix\LUDecomposition.cs" />
+    <Compile Include="Matrix\QRDecomposition.cs" />
+    <Compile Include="Matrix\SingularValueDecomposition.cs" />
+    <Compile Include="openDicom\DataStructure\DataSet\DataElement.cs" />
+    <Compile Include="openDicom\DataStructure\DataSet\DataSet.cs" />
+    <Compile Include="openDicom\DataStructure\DataSet\NestedDataSet.cs" />
+    <Compile Include="openDicom\DataStructure\DataSet\Sequence.cs" />
+    <Compile Include="openDicom\DataStructure\IDicomStreamMember.cs" />
+    <Compile Include="openDicom\DataStructure\Tag.cs" />
+    <Compile Include="openDicom\DataStructure\Value.cs" />
+    <Compile Include="openDicom\DataStructure\ValueLength.cs" />
+    <Compile Include="openDicom\DataStructure\VR.cs" />
+    <Compile Include="openDicom\DicomContext.cs" />
+    <Compile Include="openDicom\DicomException.cs" />
+    <Compile Include="openDicom\Encoding\AE.cs" />
+    <Compile Include="openDicom\Encoding\AS.cs" />
+    <Compile Include="openDicom\Encoding\AT.cs" />
+    <Compile Include="openDicom\Encoding\ByteConvert.cs" />
+    <Compile Include="openDicom\Encoding\CharacterRepertoire.cs" />
+    <Compile Include="openDicom\Encoding\CS.cs" />
+    <Compile Include="openDicom\Encoding\DA.cs" />
+    <Compile Include="openDicom\Encoding\DS.cs" />
+    <Compile Include="openDicom\Encoding\DT.cs" />
+    <Compile Include="openDicom\Encoding\EncodingException.cs" />
+    <Compile Include="openDicom\Encoding\FD.cs" />
+    <Compile Include="openDicom\Encoding\FL.cs" />
+    <Compile Include="openDicom\Encoding\IS.cs" />
+    <Compile Include="openDicom\Encoding\LO.cs" />
+    <Compile Include="openDicom\Encoding\LT.cs" />
+    <Compile Include="openDicom\Encoding\OB.cs" />
+    <Compile Include="openDicom\Encoding\OF.cs" />
+    <Compile Include="openDicom\Encoding\OW.cs" />
+    <Compile Include="openDicom\Encoding\PN.cs" />
+    <Compile Include="openDicom\Encoding\SH.cs" />
+    <Compile Include="openDicom\Encoding\SL.cs" />
+    <Compile Include="openDicom\Encoding\SQ.cs" />
+    <Compile Include="openDicom\Encoding\SS.cs" />
+    <Compile Include="openDicom\Encoding\ST.cs" />
+    <Compile Include="openDicom\Encoding\TM.cs" />
+    <Compile Include="openDicom\Encoding\TransferSyntax.cs" />
+    <Compile Include="openDicom\Encoding\Type\Age.cs" />
+    <Compile Include="openDicom\Encoding\Type\PersonName.cs" />
+    <Compile Include="openDicom\Encoding\UI.cs" />
+    <Compile Include="openDicom\Encoding\UL.cs" />
+    <Compile Include="openDicom\Encoding\UN.cs" />
+    <Compile Include="openDicom\Encoding\US.cs" />
+    <Compile Include="openDicom\Encoding\UT.cs" />
+    <Compile Include="openDicom\File\AcrNemaFile.cs" />
+    <Compile Include="openDicom\File\DicomFile.cs" />
+    <Compile Include="openDicom\File\FileMetaInformation.cs" />
+    <Compile Include="openDicom\File\XmlFile.cs" />
+    <Compile Include="openDicom\Image\PixelData.cs" />
+    <Compile Include="openDicom\Registry\DataElementDictionary.cs" />
+    <Compile Include="openDicom\Registry\DataElementDictionaryEntry.cs" />
+    <Compile Include="openDicom\Registry\IDicomDictionary.cs" />
+    <Compile Include="openDicom\Registry\Uid.cs" />
+    <Compile Include="openDicom\Registry\UidDictionary.cs" />
+    <Compile Include="openDicom\Registry\UidDictionaryEntry.cs" />
+    <Compile Include="openDicom\Registry\VM.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\FeatureVectorDialog.resx">
+      <DependentUpon>FeatureVectorDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\NoduleViewer.resx">
+      <DependentUpon>NoduleViewer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\SeriesViewer.resx">
+      <DependentUpon>SeriesViewer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Splash.resx">
+      <DependentUpon>Splash.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MainIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
