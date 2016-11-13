@@ -23,13 +23,8 @@ namespace BRISC.GUI
         private void seriesViewer_Click(object sender, EventArgs e)
         {
             Hide();
-            //FolderBrowserDialog dlg = new FolderBrowserDialog();
-            //if (dlg.ShowDialog(this) == DialogResult.OK)
-            //{
-            //    Util.ORIGINAL_IMAGES_PATH = Util.DATA_PATH;
             var sv = new SeriesViewer();
             sv.Show();
-            //}
         }
 
         private void runTask_Click(object sender, EventArgs e)

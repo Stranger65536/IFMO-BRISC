@@ -202,22 +202,29 @@ namespace BRISC.Core
             // create hash table correlating filenames with image SOP UIDs
             foreach (var dcm in dcms)
             {
-                var df = Util.LoadDICOMFile(dcm.FullName);
-                var ds = df.DataSet;
-                var tg = new Tag("0008", "0018");
-                var de = ds[tg];
-                var vv = de.Value;
-                fileSOPs.Add(vv[0].ToString(), dcm.FullName);
-                if (dialog != null)
+                try
                 {
-                    dialog.Status.Text = @"Loading series " + series + @": " + dcm.Name;
-                    Application.DoEvents();
+                    var df = Util.LoadDICOMFile(dcm.FullName);
+                    var ds = df.DataSet;
+                    var tg = new Tag("0008", "0018");
+                    var de = ds[tg];
+                    var vv = de.Value;
+                    fileSOPs.Add(vv[0].ToString(), dcm.FullName);
+                    if (dialog != null)
+                    {
+                        dialog.Status.Text = @"Loading series " + series + @": " + dcm.Name;
+                        Application.DoEvents();
+                    }
+                    tg = new Tag("0020", "1041");
+                    de = ds[tg];
+                    vv = de.Value;
+                    var zpos = double.Parse(vv[0].ToString());
+                    fileZPos.Add(zpos, dcm.FullName);
                 }
-                tg = new Tag("0020", "1041");
-                de = ds[tg];
-                vv = de.Value;
-                var zpos = double.Parse(vv[0].ToString());
-                fileZPos.Add(zpos, dcm.FullName);
+                catch (InvalidDataException e)
+                {
+                    throw new InvalidDataException(e.Message + " folder: " + folder + " study: " + study + " series: " + series);    
+                }
             }
 
             // create series file
