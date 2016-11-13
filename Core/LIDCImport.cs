@@ -2,6 +2,7 @@
 #define CALCULATE_GABOR
 #define CALCULATE_MARKOV
 
+#region
 
 using System;
 using System.Collections;
@@ -12,25 +13,21 @@ using System.Windows.Forms;
 using System.Xml;
 using BRISC.GUI;
 using openDicom.DataStructure;
-using openDicom.DataStructure.DataSet;
-using openDicom.File;
 
+#endregion
 
 namespace BRISC.Core
 {
     public class LIDCImport
     {
         public static double CENTROID_THRESHOLD = 10.0;
-
-
         private static int nodule_no;
-
 
         public static void ImportAllStudies(string folder)
         {
             // initialize dialog
             var dialog = new Splash();
-            dialog.FirstCheck.Text = "Import LIDC data";
+            dialog.FirstCheck.Text = @"Import LIDC data";
             dialog.SecondCheck.Visible = false;
             dialog.ThirdCheck.Visible = false;
             dialog.FourthCheck.Visible = false;
@@ -48,53 +45,13 @@ namespace BRISC.Core
             dialog.Progress.Value = 0;
             dialog.Show();
 
-            //int seriesDone = 0;
             foreach (var subdir in subdirs)
             {
                 foreach (var studydir in subdir.GetDirectories())
                 {
                     foreach (var seriesdir in studydir.GetDirectories())
                     {
-                        /*Dictionary<string, Dictionary<string, bool>>physicianAgreement = new Dictionary<string, Dictionary<string, bool>>();
-                            foreach (LIDCNodule nodule2 in nodules)
-                            {
-                                if (nodule1.NUID != nodule2.NUID)
-                                {
-                                    if(!physicianAgreement.ContainsKey(nodule2.Nodule_no))
-                                    {
-                                        physicianAgreement.Add(nodule2.Nodule_no, new Dictionary<string, bool>());
-                                        physicianAgreement[nodule2.Nodule_no].Add(nodule2.NoduleID, false);
-                                    }
-                                    if(!physicianAgreement[nodule2.Nodule_no].ContainsKey(nodule2.NoduleID))
-                                    {
-                                        physicianAgreement[nodule2.Nodule_no].Add(nodule2.NoduleID, false);
-                                    }
-                                    if (nodule1.Nodule_no == nodule2.Nodule_no &&nodule1.NoduleID != nodule2.NoduleID &&!physicianAgreement[nodule2.Nodule_no][nodule2.NoduleID])
-                                    {
-                                        bool flag = true;
-                                        if (nodule1.Annotations["texture"] != nodule2.Annotations["texture"])
-                                        {
-                                            flag = false;
-                                        }
-                                        if (flag)
-                                        {
-                                            nodule1.physicianCounter++;
-                                        }
-                                        physicianAgreement[nodule2.Nodule_no][nodule2.NoduleID] = true;
-                                    }
-                                }
-                            }
-                        }
-                        foreach (LIDCNodule nodule in nodules)
-                        {
-                            if (nodule.physicianCounter >= 1)
-                            {
-                                noduleDB.AddNodule(nodule);
-                            }
-                        }
-                        nodules.Clear();
-                        */
-                        dialog.Status.Text = "Loading series: " + seriesdir.Name;
+                        dialog.Status.Text = @"Loading series: " + seriesdir.Name;
                         dialog.Refresh();
                         Application.DoEvents();
 
@@ -253,7 +210,7 @@ namespace BRISC.Core
                 fileSOPs.Add(vv[0].ToString(), dcm.FullName);
                 if (dialog != null)
                 {
-                    dialog.Status.Text = "Loading series " + series + ": " + dcm.Name;
+                    dialog.Status.Text = @"Loading series " + series + @": " + dcm.Name;
                     Application.DoEvents();
                 }
                 tg = new Tag("0020", "1041");

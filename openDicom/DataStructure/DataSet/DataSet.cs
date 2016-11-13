@@ -26,8 +26,11 @@ namespace openDicom.DataStructure.DataSet
         {
             get
             {
-                var index = (int) keys[tag.ToString()];
-                return base[index];
+                if (keys.ContainsKey(tag.ToString()))
+                {
+                    return base[(int) keys[tag.ToString()]];
+                }
+                throw new InvalidDataException("Can't handle DICOM file without z-index!");
             }
         }
 

@@ -25,10 +25,6 @@ namespace openDicom.Encoding
                 var item = multiValue[i];
                 if (item.Length > 0)
                 {
-                    if (Regex.IsMatch(item, "^ [0-9]{10}" +
-                                            "([0-9]{2} ([0-9]{2} (\\.[0-9]{6}" +
-                                            "([\\+\\-][0-9]{4})? )? )? )? $",
-                        RegexOptions.IgnorePatternWhitespace))
                     {
                         item = item.Replace(".", null);
                         var year = item.Substring(0, 4);
@@ -61,10 +57,6 @@ namespace openDicom.Encoding
                                 Name + "/item", item);
                         }
                     }
-                    else
-                        throw new EncodingException(
-                            "Date time format is invalid.", Tag, Name + "/item",
-                            item);
                 }
             }
             return dateTime;
