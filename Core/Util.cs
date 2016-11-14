@@ -6,11 +6,8 @@ using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 using openDicom.DataStructure;
-using openDicom.DataStructure.DataSet;
 using openDicom.File;
-using openDicom.Image;
 using openDicom.Registry;
-
 
 namespace BRISC.Core
 {
@@ -121,17 +118,35 @@ namespace BRISC.Core
             // load raw DICOM pixel data
             var df = new DicomFile(filename, false);
             var pxd = df.PixelData;
-            var idata = (short[]) pxd.ToArray()[0];
-            var rows = pxd.Rows;
-            var cols = pxd.Columns;
 
-            // save to two-dimensional pixel data array
-            var image = new int[rows, cols];
-            for (int r = 0, i = 0; r < image.GetLength(0); r++)
-                for (var c = 0; c < image.GetLength(1); c++)
-                    image[r, c] = idata[i++];
+            if (pxd.ToArray()[0] is byte[])
+            {
+                var idata = (byte[]) pxd.ToArray()[0];
+                var rows = pxd.Rows;
+                var cols = pxd.Columns;
 
-            return image;
+                // save to two-dimensional pixel data array
+                var image = new int[rows, cols];
+                for (int r = 0, i = 0; r < image.GetLength(0); r++)
+                    for (var c = 0; c < image.GetLength(1); c++)
+                        image[r, c] = idata[i++];
+
+                return image;
+            }
+            else
+            {
+                var idata = (short[]) pxd.ToArray()[0];
+                var rows = pxd.Rows;
+                var cols = pxd.Columns;
+
+                // save to two-dimensional pixel data array
+                var image = new int[rows, cols];
+                for (int r = 0, i = 0; r < image.GetLength(0); r++)
+                    for (var c = 0; c < image.GetLength(1); c++)
+                        image[r, c] = idata[i++];
+
+                return image;
+            }
         }
 
 
